@@ -15,10 +15,7 @@ import {
 import { db } from './config';
 
 // Add a document to a collection
-export const addDocument = <T extends DocumentData>(
-  collectionName: string,
-  data: T
-) => {
+export const addDocument = <T extends DocumentData>(collectionName: string, data: T) => {
   return addDoc(collection(db, collectionName), data);
 };
 

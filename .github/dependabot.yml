@@ -1,0 +1,56 @@
+version: 2
+updates:
+  # Frontend dependencies
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+    open-pull-requests-limit: 10
+    reviewers:
+      - 'tcinhoff'
+    labels:
+      - 'dependencies'
+      - 'automated'
+    commit-message:
+      prefix: 'deps'
+    groups:
+      dev-dependencies:
+        patterns:
+          - '@types/*'
+          - 'eslint*'
+          - 'prettier*'
+          - 'vitest*'
+          - '@testing-library/*'
+        update-types:
+          - 'minor'
+          - 'patch'
+      react:
+        patterns:
+          - 'react*'
+          - '@vitejs/*'
+          - 'vite'
+
+  # Functions dependencies
+  - package-ecosystem: 'npm'
+    directory: '/functions'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+    open-pull-requests-limit: 5
+    labels:
+      - 'dependencies'
+      - 'functions'
+    commit-message:
+      prefix: 'deps(functions)'
+
+  # GitHub Actions
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+    labels:
+      - 'dependencies'
+      - 'ci'
+    commit-message:
+      prefix: 'ci'
