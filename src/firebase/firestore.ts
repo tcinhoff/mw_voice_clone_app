@@ -9,9 +9,8 @@ import {
   query,
   where,
   orderBy,
-  QueryConstraint,
-  DocumentData,
 } from 'firebase/firestore';
+import type { QueryConstraint, DocumentData } from 'firebase/firestore';
 import { db } from './config';
 
 // Add a document to a collection

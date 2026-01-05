@@ -3,10 +3,10 @@ import {
   signInWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
-  User,
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
+import type { User } from 'firebase/auth';
 import { auth } from './config';
 
 // Sign up with email and password
