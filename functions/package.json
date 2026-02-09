@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@types/node": "^25.0.3",
-    "firebase-admin": "^13.6.0",
+    "firebase-admin": "^13.6.1",
     "firebase-functions": "^7.0.2",
     "typescript": "^5.9.3"
   },
